@@ -1632,6 +1632,7 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     weight = 0.036,
 }))
 
+
 -- EFT ID: 646f6322f43d0c5d62063715
 ARC9.LoadAttachment(ATT, "eft_tactical_2d")
 

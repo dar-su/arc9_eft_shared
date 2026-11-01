@@ -744,6 +744,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -0.1,
     weight = 0.05,
 }))
+
+
 -- EFT ID: 5b7be4575acfc400161d0832
 ARC9.LoadAttachment(ATT, "eft_mount_keymod_casv2")
 
@@ -781,6 +783,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -0.15,
     weight = 0.06,
 }))
+
+
 -- EFT ID: 5b7be4645acfc400170e2dcc
 ARC9.LoadAttachment(ATT, "eft_mount_keymod_casv4")
 
@@ -819,5 +823,7 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -0.2,
     weight = 0.07,
 }))
+
+
 -- EFT ID: 5b7be46e5acfc400170e2dcf
 ARC9.LoadAttachment(ATT, "eft_mount_keymod_casv6")

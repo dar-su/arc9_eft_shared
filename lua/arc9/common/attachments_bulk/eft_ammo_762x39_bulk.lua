@@ -119,6 +119,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     failureToFeedChance = 0.02,
     misfireChance = 0.154,
 }))
+
+
 -- EFT ID: 64b7af5a8532cf95ee0a0dbd
 ARC9.LoadAttachment(ATT, "eft_ammo_76239_fmj")
 
@@ -158,6 +160,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     lightBleedModifier = 0.05,
     heavyBleedModifier = 0.05,
 }))
+
+
 -- EFT ID: 64b7af734b75259c590fa895
 ARC9.LoadAttachment(ATT, "eft_ammo_76239_sp")
 
@@ -318,6 +322,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     failureToFeedChance = 0.02,
     misfireChance = 0.154,
 }))
+
+
 -- EFT ID: 5656d7c34bdc2d9d198b4587
 ARC9.LoadAttachment(ATT, "eft_ammo_76239_ps")
 

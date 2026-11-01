@@ -172,7 +172,7 @@ ATT.AdvancedCamoSupport = true
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = 6,
-    recoilModifier = -21,
+    recoilModifier = -20.5,
     weight = 0.24,
 }))
 
@@ -335,7 +335,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.AdvancedCamoSupport = true
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
-    ergonomicsModifier = 5,
+    ergonomicsModifier = 7,
     recoilModifier = -21,
     weight = 0.148,
 }))
@@ -729,8 +729,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
-    ergonomicsModifier = 3,
-    recoilModifier = -1,
+    ergonomicsModifier = 6,
+    recoilModifier = -1.2,
     weight = 0.05,
 }))
 

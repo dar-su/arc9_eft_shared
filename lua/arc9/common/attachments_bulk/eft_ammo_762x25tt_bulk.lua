@@ -293,6 +293,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     lightBleedModifier = 0.17,
     heavyBleedModifier = 0.06,
 }))
+
+
 -- EFT ID: 68c15a033173b556890b5959
 ARC9.LoadAttachment(ATT, "eft_ammo_762x25tt_m855a1")
 
@@ -333,6 +335,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     lightBleedModifier = 0.26,
     heavyBleedModifier = 0.07,
 }))
+
+
 -- EFT ID: 68c15b4bb30038a118088bd6
 ARC9.LoadAttachment(ATT, "eft_ammo_762x25tt_m856a1")
 
@@ -371,5 +375,7 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     lightBleedModifier = 0.14,
     heavyBleedModifier = 0.04,
 }))
+
+
 -- EFT ID: 68c15f77ed3d7df9220debd6
 ARC9.LoadAttachment(ATT, "eft_ammo_762x25tt_m995")

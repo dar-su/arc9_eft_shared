@@ -117,6 +117,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     failureToFeedChance = 0.02,
     misfireChance = 0.168,
 }, "bigrifle"))
+
+
 -- EFT ID: 64b8f7968532cf95ee0a0dbf
 ARC9.LoadAttachment(ATT, "eft_ammo_762x54r_fmj")
 
@@ -154,6 +156,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     failureToFeedChance = 0.02,
     misfireChance = 0.168,
 }, "bigrifle"))
+
+
 -- EFT ID: 64b8f7c241772715af0f9c3d
 ARC9.LoadAttachment(ATT, "eft_ammo_762x54r_hpbt")
 
@@ -312,6 +316,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     failureToFeedChance = 0.02,
     misfireChance = 0.168,
 }, "bigrifle"))
+
+
 -- EFT ID: 64b8f7b5389d7ffd620ccba2
 ARC9.LoadAttachment(ATT, "eft_ammo_762x54r_spbt")
 

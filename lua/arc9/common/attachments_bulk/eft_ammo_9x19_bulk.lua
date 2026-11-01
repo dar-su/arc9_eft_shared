@@ -225,6 +225,8 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     failureToFeedChance = 0.02,
     misfireChance = 0.175,
 }, "pistol"))
+
+
 -- EFT ID: 64b7bbb74b75259c590fa897
 ARC9.LoadAttachment(ATT, "eft_ammo_9x19_fmj_m882")
 
