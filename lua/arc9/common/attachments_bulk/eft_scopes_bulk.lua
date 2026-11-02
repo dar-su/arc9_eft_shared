@@ -73,8 +73,6 @@ ATT.RTScopeDrawFunc = function(swep, rtsize, sight)
     surface.SetMaterial(mat)
     surface.SetDrawColor(255, 255, 255)
     surface.DrawTexturedRect(rtsize / 2 - size / 2, rtsize / 2 - size / 2, size, size)
-    -- local counterrotation = ARC9.NewRTScopesEnabled and 0 or (swep.LastViewModelAng.z - sight.Ang.z + (arc9_cheapscopes:GetBool() and 0 or swep.SubtleVisualRecoilAng.z * 2))
-    -- surface.DrawTexturedRectRotated(rtsize / 2, rtsize / 2, size, size, -counterrotation)
 end
 
 ATT.ZoomSound = false
@@ -172,7 +170,7 @@ ATT.RTScopeMagnificationMax = 20
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_30mm_leupold_mark4_lr_6,5_20x50_marks.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_30mm_leupold_mark4_lr_6,5_20x50_marks.png", "")
 ATT.RTScopeReticleScale = 0.95
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10
@@ -254,7 +252,7 @@ ATT.RTScopeMagnificationMax = 6
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_30mm_razor_hd_gen_2_1_6x24_mark.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_30mm_razor_hd_gen_2_1_6x24_mark.png", "")
 ATT.RTScopeReticleScale = 1.1
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10
@@ -345,8 +343,6 @@ ATT.RTScopeDrawFunc = function(swep, rtsize, sight)
     surface.SetMaterial(mat)
     surface.SetDrawColor(255, 255, 255)
     surface.DrawTexturedRect(rtsize / 2 - size / 2, rtsize / 2 - size / 2, size, size)
-    -- local counterrotation = ARC9.NewRTScopesEnabled and 0 or (swep.LastViewModelAng.z - sight.Ang.z + (arc9_cheapscopes:GetBool() and 0 or swep.SubtleVisualRecoilAng.z * 2))
-    -- surface.DrawTexturedRectRotated(rtsize / 2, rtsize / 2, size, size, -counterrotation)
 end
 
 ATT.ZoomSound = false
@@ -443,7 +439,7 @@ ATT.RTScopeMagnificationMax = 4
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_30mm_burris_fullfield_tac30_1_4x24_marks.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_30mm_burris_fullfield_tac30_1_4x24_marks.png", "")
 ATT.RTScopeReticleScale = 0.85
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10
@@ -513,8 +509,7 @@ ATT.DrawFunc = function(swep, model, wm)
     -- end
 end
 
-local Reticle_full = Material("vgui/arc9_eft_shared/reticles/adjustable/vudu_f.png", "")
-local Reticle_quarter = Material("vgui/arc9_eft_shared/reticles/adjustable/vudu_q.png", "")
+local Reticle_full = Material("vgui/arc9_eft_shared/reticles/adjustable/vudu.png", "")
 
 local scale = 0.28
 local finalsize = 20 * scale
@@ -523,16 +518,14 @@ ATT.RTScopeDrawFunc = function(swep, rtsize, sight)
     local size = (rtsize + rtsize * (1 - scrollevel) * finalsize) * scale
     local mat = Reticle_full
 
-    if scrollevel <= 0.18 then 
-        size = size / 4
-        mat = Reticle_quarter
-    end
+    -- if scrollevel <= 0.18 then 
+    --     size = size / 4
+    --     mat = Reticle_quarter
+    -- end
 
     surface.SetMaterial(mat)
     surface.SetDrawColor(255, 255, 255)
     surface.DrawTexturedRect(rtsize / 2 - size / 2, rtsize / 2 - size / 2, size, size)
-    -- local counterrotation = ARC9.NewRTScopesEnabled and 0 or (swep.LastViewModelAng.z - sight.Ang.z + (arc9_cheapscopes:GetBool() and 0 or swep.SubtleVisualRecoilAng.z * 2))
-    -- surface.DrawTexturedRectRotated(rtsize / 2, rtsize / 2, size, size, -counterrotation)
 end
 
 ATT.ZoomSound = false
@@ -604,7 +597,7 @@ ATT.Sights = {
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 1
 ATT.RTScopeFOV = 36/4
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/eft_reticle_ta01.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/eft_reticle_ta01.png", "")
 ATT.RTScopeReticleScale = 0.75
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10
@@ -681,7 +674,7 @@ ATT.Sights = {
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 1
 ATT.RTScopeFOV = 36/4
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/eft_reticle_ta01.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/eft_reticle_ta01.png", "")
 ATT.RTScopeReticleScale = 0.75
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10
@@ -755,7 +748,7 @@ ATT.Sights = {
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 2
 ATT.RTScopeFOV = 36/3.5
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_base_trijicon_acog_ta11_3.5x35_marks.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_base_trijicon_acog_ta11_3.5x35_marks.png", "")
 ATT.RTScopeReticleScale = 0.8
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10
@@ -824,7 +817,7 @@ ATT.Sights = {
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_sig_bravo4_4x30_marks.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_sig_bravo4_4x30_marks.png", "")
 ATT.RTScopeReticleScale = 0.77
 ATT.RTScopeColorable = true
 ATT.RTScopeShadowIntensity = 10
@@ -900,7 +893,7 @@ ATT.Sights = {
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_monstrum_compact_prism_scope_2x32_mark_0.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_monstrum_compact_prism_scope_2x32_mark_0.png", "")
 ATT.RTScopeReticleScale = 1.5
 ATT.RTScopeColorable = true
 ATT.RTScopeShadowIntensity = 10
@@ -983,7 +976,7 @@ end
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_elcan_specter_DR_marks.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_elcan_specter_DR_marks.png", "")
 ATT.RTScopeReticleScale = 0.88
 ATT.RTScopeColorable = true
 ATT.RTScopeShadowIntensity = 10
@@ -1078,7 +1071,7 @@ end
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_elcan_specter_DR_marks.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_elcan_specter_DR_marks.png", "")
 ATT.RTScopeReticleScale = 1.04
 ATT.RTScopeColorable = true
 ATT.RTScopeShadowIntensity = 10
@@ -1310,7 +1303,7 @@ ATT.Sights = {
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_leupold_mark4_hamr_marks.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_leupold_mark4_hamr_marks.png", "")
 ATT.RTScopeReticleScale = 0.95
 ATT.RTScopeColorable = true
 ATT.RTScopeShadowIntensity = 10
@@ -1375,7 +1368,7 @@ ATT.Sights = {
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 2
 ATT.RTScopeFOV = 36/2.5
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_base_primary_arms_compact_prism_scope_25x_marks.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_base_primary_arms_compact_prism_scope_25x_marks.png", "")
 ATT.RTScopeReticleScale = 0.9
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10
@@ -1634,7 +1627,7 @@ end
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_valday_ps320_marks.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_valday_ps320_marks.png", "")
 ATT.RTScopeReticleScale = 0.85
 ATT.RTScopeColorable = true
 ATT.RTScopeShadowIntensity = 20
@@ -1691,7 +1684,7 @@ ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
 ATT.RTScopeMagnification = 3
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_base_armasight_vulcan_gen3_bravo_mg_35x_marks.png", "smooth")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_base_armasight_vulcan_gen3_bravo_mg_35x_marks.png", "")
 ATT.RTScopeReticleScale = 0.8
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 6
