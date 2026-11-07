@@ -607,11 +607,6 @@ ATT.RTScopeNew_ShadowScale = 0.9
 
 ATT.ScopeScreenRatio = 580/1080
 
-ATT.Flare = true
-ATT.FlareColor = Color(255, 255, 255)
-ATT.FlareSize = 10
-ATT.FlareAttachment = 1
-
 ATT.ModelOffset = Vector(0, 0, -0)
 
 ATT.Attachments = {
@@ -683,11 +678,6 @@ ATT.RTScopeBlackBoxShadow = true
 ATT.RTScopeNew_ShadowScale = 0.9
 
 ATT.ScopeScreenRatio = 580/1080
-
-ATT.Flare = true
-ATT.FlareColor = Color(255, 255, 255)
-ATT.FlareSize = 10
-ATT.FlareAttachment = 1
 
 ATT.ModelOffset = Vector(0, 0, -0)
 
@@ -1249,11 +1239,6 @@ end
 
 ATT.ScopeScreenRatio = 635/1080
 
-ATT.Flare = true
-ATT.FlareColor = Color(255, 255, 255)
-ATT.FlareSize = 10
-ATT.FlareAttachment = 1
-
 ATT.ModelOffset = Vector(0, 0, -0)
 
 
@@ -1543,11 +1528,6 @@ end
 
 ATT.ScopeScreenRatio = 538/1080
 
-ATT.Flare = true
-ATT.FlareColor = Color(255, 255, 255)
-ATT.FlareSize = 10
-ATT.FlareAttachment = 1
-
 ATT.ModelOffset = Vector(0, 0, -0)
 
 ATT.Attachments = {
@@ -1696,14 +1676,14 @@ ATT.RTScopeNew_ShadowScale = 0.85
 ATT.RTScopeNightVision = true
 ATT.RTScopeNightVisionMonochrome = true
 ATT.RTScopeNightVisionCC = {
-    ["$pp_colour_addr"] = 0,
-    ["$pp_colour_addg"] = 135/255,
-    ["$pp_colour_addb"] = 0,
+    ["$pp_colour_addr"] = -80/255,
+    ["$pp_colour_addg"] = 165/255,
+    ["$pp_colour_addb"] = -80/255,
     -- ["$pp_colour_brightness"] = -2,
     -- ["$pp_colour_contrast"] = 3.5,
     -- ["$pp_colour_colour"] = 0.09,
-    ["$pp_colour_brightness"] = -0.5,
-    ["$pp_colour_contrast"] = 2.5,
+    ["$pp_colour_brightness"] = -0.2,
+    ["$pp_colour_contrast"] = 2,
     ["$pp_colour_colour"] = 0.05,
     ["$pp_colour_mulr"] = 0,
     ["$pp_colour_mulg"] = 0,
@@ -1711,11 +1691,6 @@ ATT.RTScopeNightVisionCC = {
 }
 
 ATT.ScopeScreenRatio = 700/1080
-
-ATT.Flare = true
-ATT.FlareColor = Color(255, 255, 255)
-ATT.FlareSize = 10
-ATT.FlareAttachment = 1
 
 ATT.ModelOffset = Vector(0, 0, -0)
 
@@ -1896,11 +1871,6 @@ end
 
 ATT.ScopeScreenRatio = 535/1080
 
-ATT.Flare = true
-ATT.FlareColor = Color(255, 255, 255)
-ATT.FlareSize = 10
-ATT.FlareAttachment = 1
-
 ATT.ModelOffset = Vector(0, 0, -0)
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -2061,11 +2031,6 @@ ATT.RTScopeCustomPPFunc = function(swep)
 end
 
 ATT.ScopeScreenRatio = 730/1080
-
-ATT.Flare = true
-ATT.FlareColor = Color(255, 255, 255)
-ATT.FlareSize = 10
-ATT.FlareAttachment = 1
 
 ATT.ModelOffset = Vector(0, 0, -0)
 

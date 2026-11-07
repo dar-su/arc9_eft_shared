@@ -1491,7 +1491,7 @@ ATT.Icon = Material("entities/eft_attachments/tactical/mawl.png", "mips smooth")
 
 ATT.CustomPros = { ["Hipfire Spread if on (Cannot be stacked)"] = "-50%" }
 
-ATT.Category = {"eft_tactical_top"}
+ATT.Category = {"eft_tactical_top", "eft_tactical_mawlonly"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/tac_mawl_c1_plus.mdl"
 
@@ -1997,3 +1997,99 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
 
 -- EFT ID: 689c8b454b91399db3085f2a
 ARC9.LoadAttachment(ATT, "eft_mount_scout_mlok")
+
+
+
+
+///////////////////////////////////////      eft_tactical_ngal
+
+ATT = {}
+
+ATT.PrintName = "L3Harris NGAL tactical device"
+ATT.CompactName = "NGAL"
+ATT.Icon = Material("entities/eft_attachments/6a186ccfbe0d66d438005e4e.png", "mips smooth")
+ATT.Description = "The Next Generation Aiming Laser manufactured by L3 Insight Technologies. A tactical device that combines laser designators in both visible and IR band with IR searchlight."
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Category = {"eft_tactical_top"}
+
+ATT.CustomPros = { ["Hipfire Spread if on (Cannot be stacked)"] = "-50%" }
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/tac_ngal.mdl"
+
+ATT.ToggleOnF = true
+ATT.ToggleStats = {
+    {
+        PrintName = ARC9:GetPhrase("eft_toggle_laser"),
+        Laser = true,
+        LaserIR = true,
+        LaserStrength = 1,
+        LaserFlareMat = Material("effects/arc9_eft/laserdot"),
+        LaserTraceMat = Material("effects/arc9_eft/lasertrace"),
+        LaserColor = Color(255, 14, 14),
+        LaserAttachment = 2,
+        EFTHipFireSpreadBonus = true,
+        EFTMode1 = true,
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_toggle_laser_ir"),
+        Laser = true,
+        LaserIR = true,
+        LaserStrength = 0,
+        LaserFlareMat = Material("effects/arc9_eft/laserdot"),
+        LaserTraceMat = Material("effects/arc9_eft/lasertrace"),
+        LaserColor = Color(22, 255, 14),
+        LaserAttachment = 2,
+        EFTHipFireSpreadBonus = true,
+        EFTMode1 = true,
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_toggle_light_laser_ir"),
+        Flashlight = true,
+        FlashlightColor = Color(255, 8, 0),
+        FlashlightMaterial = "effects/arc9_eft/FlashlightCookie",
+        FlashlightDistance = 1024,
+        FlashlightFOV = 50,
+        FlashlightAttachment = 1,
+        FlashlightBrightness = 0,
+        FlashlightIR = true,
+        
+        Laser = true,
+        LaserStrength = 0,
+        LaserFlareMat = Material("effects/arc9_eft/laserdot"),
+        LaserTraceMat = Material("effects/arc9_eft/lasertrace"),
+        LaserColor = Color(22, 255, 14),
+        LaserAttachment = 2,
+        EFTHipFireSpreadBonus = true,
+        EFTMode1 = true,
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_toggle_light_ir"),
+        Flashlight = true,
+        FlashlightColor = Color(255, 8, 0),
+        FlashlightMaterial = "effects/arc9_eft/FlashlightCookie",
+        FlashlightDistance = 1024,
+        FlashlightFOV = 50,
+        FlashlightAttachment = 1,
+        FlashlightBrightness = 0,
+        FlashlightIR = true,
+        EFTHipFireSpreadBonus = true,
+        EFTMode1 = true,
+    }, 
+    {
+        PrintName = ARC9:GetPhrase("eft_toggle_off"),
+    }
+}
+
+-- local meow_offset1 = Vector(1.28153, -1.55523, 0.7722)
+-- ATT.DrawFunc = function(swep, model, wm)
+--     if wm then return end
+
+--     drawlight(swep, model, 1, meow_offset1, meow_red)
+-- end
+
+-- EFT ID: 6a186ccfbe0d66d438005e4e
+ARC9.LoadAttachment(ATT, "eft_tactical_ngal")
+
+
