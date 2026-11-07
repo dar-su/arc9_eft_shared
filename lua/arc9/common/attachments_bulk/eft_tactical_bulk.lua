@@ -2088,6 +2088,11 @@ ATT.ToggleStats = {
 
 --     drawlight(swep, model, 1, meow_offset1, meow_red)
 -- end
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1.5,
+    weight = 0.18,
+}))
+
 
 -- EFT ID: 6a186ccfbe0d66d438005e4e
 ARC9.LoadAttachment(ATT, "eft_tactical_ngal")
