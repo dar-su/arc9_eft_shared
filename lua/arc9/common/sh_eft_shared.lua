@@ -609,6 +609,51 @@ function ARC9EFT.GenerateEFTAttachment(inputtbl, ammotype)
 end
 
 
+
+function ARC9EFT.ScopeReticle3D(sight, ang, pos, name, scale1, scale2, lods)
+    if !ARC9.EFTScopeReticleActiveModel or ARC9.EFTScopeReticleActiveModel != name then
+        ARC9.EFTScopeReticleActiveModel = name
+
+        if IsValid(ARC9.EFTScopeReticleCSEnt) then
+            ARC9.EFTScopeReticleCSEnt:Remove()
+            ARC9.EFTScopeReticleCSEnt = nil
+        end
+
+        return
+    end
+    
+    ARC9.EFTScopeReticleCSEnt = ARC9.EFTScopeReticleCSEnt or ClientsideModel("models/weapons/arc9/darsu_eft/reticles/" .. name .. ".mdl")
+
+    local mdl = ARC9.EFTScopeReticleCSEnt
+    mdl:SetNoDraw(true)
+    mdl:SetPos(pos + ang:Forward() * 10)
+    mdl:SetAngles(ang)
+
+    local scrollevel = math.Round(sight.SmoothScrollLevel or 0, 2)
+    mdl:SetBodygroup(0, math.Round(Lerp(1 - scrollevel, lods, 0)))
+    
+    local size = Lerp(1 - scrollevel, scale1, scale2)
+
+    local matr = Matrix()
+    matr:Scale(Vector(1, 1, 1) * size)
+    mdl:EnableMatrix("RenderMultiply", matr)
+    mdl:SetupBones()
+    mdl:DrawModel()
+    
+    -- -- extra thickening cuz it gets too thin
+    -- local offs = Lerp(1 - scrollevel, 0.012, 0.004)
+    -- local thicks = { Vector(0, -offs, 0), Vector(0, offs, 0), Vector(0, 0, offs), Vector(0, 0, -offs) }
+
+    -- for i = 1, 4 do
+    --     local matr = Matrix()
+    --     matr:Translate(thicks[i])
+    --     matr:Scale(Vector(1, 1, 1) * size)
+    --     mdl:EnableMatrix("RenderMultiply", matr)
+    --     mdl:SetupBones()
+    --     mdl:DrawModel()
+    -- end
+end
+
 if CLIENT then
     timer.Simple(1, function()
     

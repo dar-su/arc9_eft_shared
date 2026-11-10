@@ -55,24 +55,8 @@ ATT.DrawFunc = function(swep, model, wm)
     end
 end
 
-local Reticle_full = Material("vgui/arc9_eft_shared/reticles/adjustable/March Tactical 3-24x42 Mark_f.png", "")
-local Reticle_quarter = Material("vgui/arc9_eft_shared/reticles/adjustable/March Tactical 3-24x42 Mark_q.png", "")
-
-local scale = 1.25
-local finalsize = 6.25 * scale
-ATT.RTScopeDrawFunc = function(swep, rtsize, sight) 
-    local scrollevel = sight.SmoothScrollLevel or 0
-    local size = (rtsize + rtsize * (1 - scrollevel) * finalsize) * scale
-    local mat = Reticle_full
-
-    if scrollevel <= 0.85 then 
-        size = size / 3
-        mat = Reticle_quarter
-    end
-
-    surface.SetMaterial(mat)
-    surface.SetDrawColor(255, 255, 255)
-    surface.DrawTexturedRect(rtsize / 2 - size / 2, rtsize / 2 - size / 2, size, size)
+ATT.RTScopeNew_DrawFunc3D = function(swep, scrh, sight, modelang, lerped)
+    ARC9EFT.ScopeReticle3D(sight, modelang, lerped, "march", 0.2, 1.85, 4)
 end
 
 ATT.ZoomSound = false
@@ -325,24 +309,9 @@ ATT.DrawFunc = function(swep, model, wm)
     end
 end
 
-local Reticle_full = Material("vgui/arc9_eft_shared/reticles/adjustable/PM_II_1-8x24_mark_f.png", "")
-local Reticle_quarter = Material("vgui/arc9_eft_shared/reticles/adjustable/PM_II_1-8x24_mark_q.png", "")
 
-local scale = 0.625
-local finalsize = 10.5 * scale
-ATT.RTScopeDrawFunc = function(swep, rtsize, sight) 
-    local scrollevel = sight.SmoothScrollLevel or 0
-    local size = (rtsize + rtsize * (1 - scrollevel) * finalsize) * scale
-    local mat = Reticle_full
-
-    if scrollevel <= 0.3 then 
-        size = size / 4
-        mat = Reticle_quarter
-    end
-
-    surface.SetMaterial(mat)
-    surface.SetDrawColor(255, 255, 255)
-    surface.DrawTexturedRect(rtsize / 2 - size / 2, rtsize / 2 - size / 2, size, size)
+ATT.RTScopeNew_DrawFunc3D = function(swep, scrh, sight, modelang, lerped)
+    ARC9EFT.ScopeReticle3D(sight, modelang, lerped, "pm18x24", 0.133, 1.006, 4)
 end
 
 ATT.ZoomSound = false
@@ -509,23 +478,8 @@ ATT.DrawFunc = function(swep, model, wm)
     -- end
 end
 
-local Reticle_full = Material("vgui/arc9_eft_shared/reticles/adjustable/vudu.png", "")
-
-local scale = 0.28
-local finalsize = 20 * scale
-ATT.RTScopeDrawFunc = function(swep, rtsize, sight) 
-    local scrollevel = sight.SmoothScrollLevel or 0
-    local size = (rtsize + rtsize * (1 - scrollevel) * finalsize) * scale
-    local mat = Reticle_full
-
-    -- if scrollevel <= 0.18 then 
-    --     size = size / 4
-    --     mat = Reticle_quarter
-    -- end
-
-    surface.SetMaterial(mat)
-    surface.SetDrawColor(255, 255, 255)
-    surface.DrawTexturedRect(rtsize / 2 - size / 2, rtsize / 2 - size / 2, size, size)
+ATT.RTScopeNew_DrawFunc3D = function(swep, scrh, sight, modelang, lerped)
+    ARC9EFT.ScopeReticle3D(sight, modelang, lerped, "vudu", 0.095, 0.615, 2)
 end
 
 ATT.ZoomSound = false
