@@ -60,6 +60,8 @@ ATT.HasAmmoooooooo = true
 
 ATT.EFTRoundName = ARC9:GetPhrase("eft_ammo_76239_t45m1.printname")
 
+ATT.TracerNum = 1
+ATT.TracerColor = Color(255, 16, 16)
 
 ATT.Category = {"eft_ammo_76239"}
 
